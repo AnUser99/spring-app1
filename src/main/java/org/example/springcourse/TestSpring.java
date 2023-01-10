@@ -1,3 +1,5 @@
+// Spring Framework. Урок 10
+
 package org.example.springcourse;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -8,18 +10,20 @@ public class TestSpring {
                 "applicationContext.xml"
         );
 
-        Music music = context.getBean("rockMusic", Music.class);
-
-        MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
-        musicPlayer.setMusic(music);
+//        Music music = context.getBean("rockMusic", Music.class);
+//
 //        MusicPlayer musicPlayer = new MusicPlayer(music);
-        musicPlayer.playMusic();
-
-        Music music2 = context.getBean("classicalMusic", Music.class);
-        MusicPlayer classicalMusicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
-        classicalMusicPlayer.setMusic(music2);
+//        musicPlayer.playMusic();
+//
+//        Music music2 = context.getBean("classicalMusic", Music.class);
 //        MusicPlayer classicalMusicPlayer = new MusicPlayer(music2);
-        classicalMusicPlayer.playMusic();
+//        classicalMusicPlayer.playMusic();
+
+//        MusicPlayer musicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
+//        musicPlayer.playMusic();
+
+        Computer computer = context.getBean("computer", Computer.class);
+        System.out.println(computer);
 
         context.close();
     }
